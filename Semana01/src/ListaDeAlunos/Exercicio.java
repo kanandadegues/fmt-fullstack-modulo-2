@@ -16,6 +16,8 @@ public class Exercicio {
 
         while(!nomeDigitado.equalsIgnoreCase("fim")){
 
+            listaAlunos.add(nomeDigitado);
+
             System.out.println("Digite as notas do aluno(a)" + nomeDigitado);
             System.out.println("Digite a primeira nota = ");
             double n1 = entrada.nextDouble();
@@ -28,6 +30,7 @@ public class Exercicio {
             notas[0] = n1;
             notas[1] = n2;
             notas[2] = n3;
+            listaNotas.add(notas);
 
             System.out.println("Digite nome do aluno ou fim para finalizar");
             nomeDigitado = entrada.next();

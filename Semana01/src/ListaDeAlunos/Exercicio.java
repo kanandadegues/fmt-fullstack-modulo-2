@@ -1,6 +1,7 @@
 package ListaDeAlunos;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class Exercicio {
@@ -32,8 +33,13 @@ public class Exercicio {
             notas[2] = n3;
             listaNotas.add(notas);
 
-            System.out.println("Digite nome do aluno ou fim para finalizar");
+            System.out.println("Digite nome do aluno(a) ou fim para finalizar");
             nomeDigitado = entrada.next();
+        }
+
+        for (int i = 0; i < listaAlunos.size(); i++){
+            System.out.println("Aluno(a) " + listaAlunos.get(i));
+            System.out.println("Notas " + Arrays.toString(listaNotas.get(i)));
         }
 
     }

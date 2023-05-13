@@ -40,6 +40,12 @@ public class Exercicio {
         for (int i = 0; i < listaAlunos.size(); i++){
             System.out.println("Aluno(a) " + listaAlunos.get(i));
             System.out.println("Notas " + Arrays.toString(listaNotas.get(i)));
+            double totalNotas = 0.0;
+            for (int n = 0; n < listaNotas.get(i).length; n++){
+                totalNotas += listaNotas.get(i)[n];
+            }
+            double media = totalNotas / listaNotas.get(i).length;
+            System.out.println("Média do aluno(a) " + listaAlunos.get(i) + " = " + media);
         }
 
     }

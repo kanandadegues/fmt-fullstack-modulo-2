@@ -37,6 +37,9 @@ public class Exercicio {
             nomeDigitado = entrada.next();
         }
 
+        ArrayList<String> aprovados = new ArrayList<>();
+        ArrayList<String> reprovados = new ArrayList<>();
+
         for (int i = 0; i < listaAlunos.size(); i++){
             System.out.println("Aluno(a) " + listaAlunos.get(i));
             System.out.println("Notas " + Arrays.toString(listaNotas.get(i)));
@@ -46,7 +49,18 @@ public class Exercicio {
             }
             double media = totalNotas / listaNotas.get(i).length;
             System.out.println("Média do aluno(a) " + listaAlunos.get(i) + " = " + media);
+            if (media >= 7.0){
+                aprovados.add(listaAlunos.get(i) + " com media " + media);
+            } else{
+                reprovados.add(listaAlunos.get(i) + " com media " + media);
+            }
         }
+
+        System.out.println("Lista de aprovados e suas médias");
+        aprovados.forEach(System.out::println);
+
+        System.out.println("Lista de reprovados e suas médias");
+        reprovados.forEach(System.out::println);
 
     }
 }

@@ -10,4 +10,9 @@ public class Produtos {
         this.precoProduto = precoProduto;
         this.quantidadeProduto = quantidadeProduto;
     }
+
+    public void adicionarProdutos(int qtdAdicionada){
+        this.quantidadeProduto += qtdAdicionada;
+        System.out.println("Foram adicionados " + qtdAdicionada + " produtos ao estoque.");
+    }
 }

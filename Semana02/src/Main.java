@@ -1,5 +1,8 @@
+import Entidades.Produtos;
+
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Hello world!");
+
+        Produtos produto = new Produtos();
     }
 }

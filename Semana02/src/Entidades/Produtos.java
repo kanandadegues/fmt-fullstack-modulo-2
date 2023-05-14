@@ -28,4 +28,8 @@ public class Produtos {
                                "produtos atualizada é " + quantidadeProduto);
         }
     }
+
+    public double valorTotalEstoque(){
+        return quantidadeProduto * precoProduto;
+    }
 }

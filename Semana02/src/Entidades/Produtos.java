@@ -13,6 +13,19 @@ public class Produtos {
 
     public void adicionarProdutos(int qtdAdicionada){
         this.quantidadeProduto += qtdAdicionada;
-        System.out.println("Foram adicionados " + qtdAdicionada + " produtos ao estoque.");
+        System.out.println("Foram adicionados " + qtdAdicionada + " produtos ao estoque. " +
+                           "A quantidade total de produtos no estoque é " + quantidadeProduto);
+    }
+
+    public void removerProdutos(int qtdRemovida){
+        if(quantidadeProduto < qtdRemovida){
+            System.out.println("Não é possível remover uma quantidade superior ao que consta no estoque. " +
+                               "O estoque atualmente conta com " + quantidadeProduto + " produtos");
+            return;
+        } else{
+            quantidadeProduto -= qtdRemovida;
+            System.out.println("Foram removidos do estoque " + qtdRemovida + " produtos e a quantidade de " +
+                               "produtos atualizada é " + quantidadeProduto);
+        }
     }
 }

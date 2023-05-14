@@ -32,4 +32,9 @@ public class Produtos {
     public double valorTotalEstoque(){
         return quantidadeProduto * precoProduto;
     }
+
+    @Override
+    public String toString() {
+        return this.nomeProduto + ", por " + this.precoProduto + " reais " + this.quantidadeProduto + " produtos em estoque." ;
+    }
 }

@@ -1,5 +1,22 @@
+import Modelos.Cargo;
+import Modelos.Colaborador;
+import Modelos.Nivel;
+
+import java.util.ArrayList;
+import java.util.Date;
+
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Hello world!");
+
+        ArrayList<Colaborador> colaboradores = new ArrayList<>();
+        ArrayList<Cargo> cargos = new ArrayList<>();
+
+        cargos.add(new Cargo("Desenvolvedor Front-End", 3000.0, Nivel.JUNIOR));
+        cargos.add(new Cargo("Desenvolvedor Front-End", 5000.0, Nivel.PLENO));
+        cargos.add(new Cargo("Desenvolvedor Front-End", 8000.0, Nivel.SENIOR));
+
+        colaboradores.add((new Colaborador("Pedro", new Date(), cargos.get(0))));
+        colaboradores.add((new Colaborador("João", new Date(), cargos.get(1))));
+        colaboradores.add((new Colaborador("Maria", new Date(), cargos.get(2))));
     }
 }

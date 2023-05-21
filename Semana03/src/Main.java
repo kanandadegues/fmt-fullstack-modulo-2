@@ -42,6 +42,8 @@ public class Main {
         }
 
         desligarColaborador();
+
+        promoverColaborador();
     }
 
     public static void admitirColaborador(Colaborador colaborador) {
@@ -80,4 +82,31 @@ public class Main {
 
         colaborador.setDtDesligamento(new Date());
     }
+
+    public static void promoverColaborador(){
+        JOptionPane.showMessageDialog(null, "Promover colaborador");
+
+        Colaborador colaborador = (Colaborador) JOptionPane.showInputDialog(
+                null,
+                "Selecione o colaborador",
+                "Seleção de colaborador",
+                JOptionPane.PLAIN_MESSAGE,
+                null,
+                colaboradores.toArray(),
+                colaboradores.get(0)
+        );
+
+        Cargo cargo = (Cargo) JOptionPane.showInputDialog(
+                null,
+                "Selecione o cargo",
+                "Seleção de cargo",
+                JOptionPane.PLAIN_MESSAGE,
+                null,
+                cargos.toArray(),
+                cargos.get(0)
+        );
+
+        colaborador.setCargo(cargo);
+    }
+
 }

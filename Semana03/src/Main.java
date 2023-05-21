@@ -2,14 +2,15 @@ import Modelos.Cargo;
 import Modelos.Colaborador;
 import Modelos.Nivel;
 
+import javax.swing.*;
 import java.util.ArrayList;
 import java.util.Date;
 
 public class Main {
-    public static void main(String[] args) {
 
-        ArrayList<Colaborador> colaboradores = new ArrayList<>();
-        ArrayList<Cargo> cargos = new ArrayList<>();
+    static ArrayList<Colaborador> colaboradores = new ArrayList<>();
+    static ArrayList<Cargo> cargos = new ArrayList<>();
+    public static void main(String[] args) {
 
         cargos.add(new Cargo("Desenvolvedor Front-End", 3000.0, Nivel.JUNIOR));
         cargos.add(new Cargo("Desenvolvedor Front-End", 5000.0, Nivel.PLENO));
@@ -33,5 +34,30 @@ public class Main {
                 }
             }
         }
+
+        Colaborador colaborador = adicionarNovoColaborador();
+        if (colaborador != null){
+            admitirColaborador(colaborador);
+        }
+    }
+
+    public static void admitirColaborador(Colaborador colaborador){
+        colaboradores.add(colaborador);
+    }
+
+    public static Colaborador adicionarNovoColaborador(){
+        String nome = JOptionPane.showInputDialog(null, "Digite o nome do colaborador");
+        Date dtAdminissao = new Date();
+        Cargo cargo = (Cargo) JOptionPane.showInputDialog(
+                null,
+                "Selecione um cargo",
+                "Seleção de cargo",
+                JOptionPane.PLAIN_MESSAGE,
+                null,
+                cargos.toArray(),
+                cargos.get(0)
+        );
+        Colaborador colaborador = new Colaborador(nome, dtAdminissao, cargo);
+        return colaborador;
     }
 }

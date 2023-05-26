@@ -4,6 +4,8 @@ import Modelos.Nivel;
 
 import javax.swing.*;
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.Date;
 
 public class Main {
@@ -109,4 +111,12 @@ public class Main {
         colaborador.setCargo(cargo);
     }
 
+    public static void listarSalarioDecrescente(ArrayList<Colaborador> colaboradores){
+        Collections.sort(colaboradores, new Comparator<Colaborador>() {
+            @Override
+            public int compare(Colaborador o1, Colaborador o2) {
+                return Double.compare(o2.getSalario(), o1.getSalario());
+            }
+        });
+    }
 }

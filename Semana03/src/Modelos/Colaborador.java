@@ -55,4 +55,16 @@ public class Colaborador {
     public void setSalario(double salario) {
         this.salario = salario;
     }
+
+    @Override
+    public String toString() {
+        return "Colaborador{" +
+                "nome='" + nome + '\'' +
+                ", dtAdmissao=" + dtAdmissao +
+                ", dtDesligamento=" + dtDesligamento +
+                ", cargo=" + cargo +
+                ", salario=" + salario +
+                '}';
+    }
 }
+

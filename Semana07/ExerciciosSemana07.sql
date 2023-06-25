@@ -25,7 +25,7 @@ SELECT ID FROM CLIENTES
 -- Ex 5 - Selecione os clientes por nome Utilizando Like
 
 SELECT * FROM CLIENTES
-WHERE NOME LIKE '%IUS'
+WHERE NOME LIKE '%IUS%'
 
 -- Ex 6 - Crie um Script para atualizar um cliente
 
